@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .login-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .login-modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 5px;
+            width: 40%;
+            max-width: 500px;
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .form-control:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+        }
+        .social-login {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-login a {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+            color: white;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .social-login a.facebook {
+            background-color: #3b5998;
+        }
+        .social-login a.google {
+            background-color: #db4a39;
+        }
+        .social-login span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .social-login i {
+            margin-right: 10px;
+        }
+        .password-input-group {
+            position: relative;
+        }
+        .password-toggle-icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #aaa;
+        }
+        .password-toggle-icon:hover {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div id="registerModal" class="login-modal">
+        <div class="login-modal-content">
+            <span class="close-button">&times;</span>
+            <h2 class="text-center mb-4">Đăng ký thành viên</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập:</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group password-input-group">
+                    <label for="password">Mật khẩu:</label>
+                    <div>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                        <div class="password-toggle-icon" style="top: 50px;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group password-input-group">
+                    <label for="confirmPassword">Xác nhận mật khẩu:</label>
+                    <div>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                        <div class="password-toggle-icon" style="top: 50px;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Đăng ký</button>
+            </form>
+            <hr>
+            <div class="social-login">
+                <a href="#" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Tiếp tục với Facebook</span>
+                </a>
+                <a href="#" class="google">
+                    <i class="fab fa-google"></i>
+                    <span>Tiếp tục với Google</span>
+                </a>
+            </div>
+            <div class="text-right mt-3">
+                <p>Bạn đã có tài khoản? <a href="#" class="text-success">Đăng nhập tại đây!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lấy modal và nút đóng
+        var modal = document.getElementById("registerModal");
+        var closeButton = document.getElementsByClassName("close-button")[0];
+
+        // Hiện modal khi người dùng bấm vào nút đăng ký
+        var registerButton = document.createElement("button");
+        registerButton.textContent = "Đăng ký";
+        registerButton.classList.add("btn", "btn-success");
+        registerButton.addEventListener("click", function() {
+            modal.style.display = "block";
+        });
+        document.body.appendChild(registerButton);
+
+        // Đóng modal khi người dùng bấm vào nút đóng hoặc bên ngoài modal
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Hiện/ẩn mật khẩu
+        var passwordInput = document.getElementById("password");
+        var confirmPasswordInput = document.getElementById("confirmPassword");
+        var passwordToggleIcons = document.querySelectorAll(".password-toggle-icon i");
+
+        passwordToggleIcons.forEach(function(icon) {
+            icon.addEventListener("click", function() {
+                var inputField = this.closest(".password-input-group").querySelector("input");
+                if (inputField.type === "password") {
+                    inputField.type = "text";
+                    this.classList.remove("fa-eye");
+                    this.classList.add("fa-eye-slash");
+                } else {
+                    inputField.type = "password";
+                    this.classList.remove("fa-eye-slash");
+                    this.classList.add("fa-eye");
+                }
+            });
+        });
+
+        // Lấy form và message element
+        const form = document.getElementById('registerForm');
+        const messageDiv = document.getElementById('message');
+
+        // Thêm sự kiện submit cho form
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Ngăn chặn form submit theo mặc định
+
+            // Lấy dữ liệu từ form
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // Gửi yêu cầu đăng ký đến máy chủ
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, email, password })
+                });
+
+                if (response.ok) {
+                    // Hiển thị thông báo thành công
+                    messageDiv.textContent = 'Đăng ký thành công!';
+                    messageDiv.classList.remove('hidden');
+                    form.reset(); // Xóa dữ liệu trong form
+                } else {
+                    // Hiển thị thông báo lỗi
+                    const error = await response.json();
+                    messageDiv.textContent = error.message;
+                    messageDiv.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Xử lý lỗi trong quá trình gửi yêu cầu
+                messageDiv.textContent = 'Đã xảy ra lỗi. Vui lòng thử lại sau.';
+                messageDiv.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
