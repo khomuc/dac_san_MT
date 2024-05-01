@@ -1,0 +1,133 @@
+
+
+/* -------- CSS for Categories -------- */
+.item-img{
+    width: 200px; 
+    height: 200px; 
+}
+.sub-title{
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    color: #e07c68;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    color: #ee4d2d;
+}
+
+
+
+.cate-item{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    margin: 12px 0px 12px 0;
+}
+
+.cate-item:hover{
+    border: 2px solid var(--green);
+    filter: drop-shadow(1px 1px 5px #ffb000);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.item-img{
+    width: 210px;
+    margin-top: 10px;
+}
+
+.item-name{
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #ee4d2d!important;
+    margin: 0;
+    margin-top: 14px;
+}
+
+/* Moblie */
+@media only screen and (max-width: 740px){
+    .sub-title{
+        font-size: 18px;
+    }
+    
+    .title{
+        font-size: 20px;
+    }
+
+    .menu{
+        display: flex!important;
+        flex-direction: column;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 741px) and (max-width: 1024px){
+    .menu{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --------------Menu------------- */
+.menu{
+    display: grid!important;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.btn{
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #ffc107; /* Màu nền của nút */
+    color: #fff; /* Màu chữ của nút */
+    border: none; /* Không có đường viền */
+    border-radius: 5px; /* Bo tròn viền nút */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+}
+
+.btn:hover {
+    background-color: #ff9800; /* Màu nền khi di chuột qua nút */
+}
+
+
+
+
+.price{
+    color: black; 
+    font-weight: 700; 
+    font-size:22px;
+    margin-bottom:0; 
+    line-height: 38px
+}
+
+
+   
+     .page-item {
+        display: block;
+        padding: 5px 10px;
+        font-weight: 700; 
+        
+        color: black;
+    }
+    
+    
+
+    .page-item.active a,
+    .page-item a:hover {
+        background-color:rgb(233, 233, 38);
+        color: whitesmoke;
+        border-radius: 5px;
+    }
+
+
+
