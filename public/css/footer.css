@@ -3,8 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    color: #f5f5dc;
 }
-
+p{
+    color: #f5f5dc;
+}
+.bg-footer{
+    background-color: #004225;
+}
 .footer-intro{
     width: 30%;
     display: flex;
@@ -20,7 +26,7 @@
 .footer-intro-content{
     width: 100%;
     font-size: 14px;
-    color: #666666;
+    color: #f5f5dc;
     text-align: justify;
 }
 
@@ -36,17 +42,18 @@
     width: 30%;
     display: flex;
     flex-direction: column;
+    color: #f5f5dc;
 }
 
 .footer-nav-title{
     font-weight: bold;
     font-size: 22px;
-    color: #192A56;
+    color: #f5f5dc;
 }
 
 .footer-nav-link{
     font-size: 14px;
-    color: #666666;
+    color: #f5f5dc;
 }
 p.footer-nav-link{
     margin-bottom: 10px;
@@ -54,7 +61,7 @@ p.footer-nav-link{
 
 p.footer-nav-link a{
     font-size: 14px;
-    color: #666666;
+    color: #f5f5dc;
     text-decoration: none;
 }
 

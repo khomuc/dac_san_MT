@@ -11,39 +11,85 @@
 
 <body>
     <header>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <div id="wrapper" class="wrapper position-fixed top-0">
+            <div class="container mt-1 mb-2">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div id="header-logo" class="col-xl-3 col-md-4">
+                        <a href="/index.html"><img class="w-75" src="./public/images/logo.png" alt="Logo"></a>
+                    </div>
+                    <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
+                        <nav class="nav nav-pills flex-column flex-sm-row">
+                            <a class="flex-sm-fill text-sm-center nav-link" href="home.html">Trang chủ</a>
+                            <a class="flex-sm-fill text-sm-center nav-link" href="Product.html">Sản phẩm</a>
+                            <a class="flex-sm-fill text-sm-center nav-link active" href="about.html">Giới thiệu</a>
+                        </nav>
+                    </div>
+                    <div id="header-search" class="col-xl-3 col-md-7">
+                        <div class="form-text">
+                            <form action="" method="get">
+                                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
+                        <a href="cart.html" id="cart" class="rounded-circle text-center"
+                            style="width: 50px; height: 50px;"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
+                        <img id="avatar" class="rounded-circle dropdown-toggle" style="width: 50px"
+                            src="public/images/giothieu/avt.jpg" alt="avatar">
+                        <ul id="sub-nav" class="position-absolute top-100 end-0">
+                            <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Cá
+                                    nhân</a></li>
+                            <li><a class="dropdown-item" href="login5.html"><i class="fas fa-sign-out-alt me-2"></i>Đăng
+                                    xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="IMG/banner.jfif" alt="Los Angeles" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="IMG/Banner 2.jpg" alt="Chicago" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="IMG/banner 3.jpg" alt="New York" class="d-block w-100">
-                </div>
-            </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-            
         </div>
     </header>
+    <footer class="bg-footer">
+        <div class="wrapper bg-footer ">
+            <div class="container">
+                <div class="footer">
+                    <div class="footer-intro">
+                        <img class="footer-intro-img mb-2" src="public/images/logo.png" alt="logo">
+                        <p class="footer-intro-content"><b class="footer-intro-content">Bếp Miền Tây </b>là Nơi Kết Nối
+                            Giữa Hương Sắc và Truyền Thống, Hòa Mình Trong Vị Ngọt Đắng của Miền Tây: Khám Phá Tinh Hoa
+                            Ẩm Thực!!.</p>
+                        <p class="footer-intro-content">© 2024 Bep Mien Tay. All rights reserved.</p>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-nav-content" style="width: 40%">
+                            <h3 class="footer-nav-title center">LIÊN HỆ</h3>
+                            <p class="footer-nav-link"><i class="fas fa-phone m-1"></i>0123 456 789</p>
+                            <p class="footer-nav-link"><i class="fas fa-envelope-open me-1"></i>bepmientay@gmail.com</p>
+                            <p class="footer-nav-link"><a href="#"><i class="fab fa-facebook-square me-1"></i>Bếp Miền
+                                    Tây</a></p>
+                            <p class="footer-nav-link"><i class="fas fa-map-marker-alt me-1"></i>P.Tân An, Q.Ninh Kiều,
+                                Tp.Cần Thơ</p>
+                        </div>
+                        <div class="footer-nav-content center">
+                            <h3 class="footer-nav-title">DANH MỤC</h3>
+                            <p class="footer-nav-link"><a href="">Trang chủ</a></p>
+                            <p class="footer-nav-link"><a href="">Sản phẩm</a></p>
+                            <p class="footer-nav-link"><a href="">Giới thiệu</a></p>
+                        </div>
+                        <div class="footer-nav-content">
+                            <h3 class="footer-nav-title ">ĐẶC SẢN</h3>
+                            <p class="footer-nav-link"><a href="">Noodle</a></p>
+                            <p class="footer-nav-link"><a href="">Kẹo</a></p>
+                            <p class="footer-nav-link"><a href="">Bánh ngọt</a></p>
+                            <p class="footer-nav-link"><a href="">Bánh mặn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--về đầu trang-->
+        <a class="on-top" href=""></a>
+    </footer>
 </body>
 
 </html>

@@ -5,82 +5,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="logo" href="images/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="guarantee.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-  <script src="js/header.js"></script>
+  <link rel="stylesheet" href="public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
+  <script src="public/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="shortcut icon" href="./public/images/logo.png">
+  <link rel="stylesheet" href="./public/font/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./public/css/base.css">
+  <link rel="stylesheet" href="./public/css/reset.css">
+  <link rel="stylesheet" href="./public/css/header.css">
+  <link rel="stylesheet" href="./public/css/footer.css">
+  <link rel="stylesheet" href="./public/css/guarantee.css">
+  <link rel="stylesheet" href="./public/css/home.css">
+  <link rel="stylesheet" href="./public/css/about.css">
+  <link rel="stylesheet" href="./public/css/profile.css">
+  <link rel="stylesheet" href="./public/css/cart.css">
+  <link rel="stylesheet" href="public/Product.css">
   <title>Trang Chủ</title>
 </head>
 
-<body id="homebody">
+<body>
   <!-- header -->
-  <header class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="home.html">
-              <img src="images/logo.png" alt="Logo" height="50px">
-          </a>
-  
-          <!-- Navbar toggle button (for small screens) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="home.html">Trang chủ</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Sản phẩm</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Liên hệ</a>
-                  </li>
-              </ul>
-  
-              <!-- Search form -->
-              <form class="d-flex ms-auto my-2 my-lg-0">
-                  <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">
-                    <i class="fas fa-search"></i> 
-                </button>
-              </form>
-  
-              <!-- Giỏ hàng -->
-              <a class="nav-link" href="cart.html">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
+  <header>
+    <div id="wrapper" class="wrapper position-fixed top-0">
+      <div class="container mt-1 mb-2">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div id="header-logo" class="col-xl-3 col-md-1">
+            <a href="/index.html"><img class="w-50" src="public/images/logo.png" alt="Logo"></a>
           </div>
-      </div>
-  </nav>
-  </header>
+          <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+              <a class="flex-sm-fill text-sm-center nav-link" href="home.html">Trang chủ</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="Product.html">Sản phẩm</a>
+              <a class="flex-sm-fill text-sm-center nav-link active" href="about.html">Giới thiệu</a>
+            </nav>
+          </div>
+          <div id="header-search" class="col-xl-3 col-md-7">
+            <div class="form-text">
+              <form action="" method="get">
+                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
 
-  <!-- Banner -->
-  <div class="banner container-fluid"></div>
-  <!-- End banner -->
-  
+              </form>
+            </div>
+          </div>
+          <div id="header-sc" class="col-xl-1 col-md-0 d-flex justify-content-end">
+            <a href="Search.html" id="cart" class="rounded-circle text-center" style="width: 50px;"><i
+                class="fas fa-search"></i></a>
+          </div>
+          <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
+            <a href="cart.html" id="cart" class="rounded-circle text-center" style="width: 50px; height: 50px;"><i
+                class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
+            <img id="avatar" class="rounded-circle dropdown-toggle" style="width: 50px"
+              src="public/images/giothieu/avt.jpg" alt="avatar">
+            <ul id="sub-nav" class="position-absolute top-100 end-0">
+              <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Cá
+                  nhân</a></li>
+              <li><a class="dropdown-item" href="login5.html"><i class="fas fa-sign-out-alt me-2"></i>Đăng
+                  xuất</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div>
+    <img src="public/images/banner.png" alt="banner" class="img-fluid">
+  </div>
+
   <!--About us-->
   <div class="container-fluid py-5" style="background-color: #343a40;">
     <div class="row container">
-        <div class="col-md-6">
-            <img src="images/bay-bao-san.jpg" class="img-fluid rounded mr-2" alt="About Us Image">
-        </div>
-        <div class="col-md-6 text-white">
-            <h1 class="mb-4">Bếp Miền Tây</h1>
-            <p>Welcome to our website! We are passionate about...</p>
-            <p>Our mission is to...</p>
-            <p>Contact us at: contact@example.com</p>
-        </div>
+      <div class="col-md-6">
+        <img src="public/images/bay-bao-san.jpg" class="img-fluid rounded mr-2" alt="About Us Image">
+      </div>
+      <div class="col-md-6 text-white">
+        <h1 class="mb-4">Bếp Miền Tây</h1>
+        <p>Welcome to our website! We are passionate about...</p>
+        <p>Our mission is to...</p>
+        <p>Contact us at: contact@example.com</p>
+      </div>
     </div>
-</div>
+  </div>
 
   <!--Caterories-->
   <main id="homemain">
@@ -91,42 +100,42 @@
           <div class="cate-content container categories">
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-2-banhpia.webp" alt="">
+                <img class="item-img" src="public/images/Categories/cate-2-banhpia.webp" alt="">
                 <h5 class="item-name">Bánh ngọt</h5>
                 <p class="item-des">Các loại bánh ngọt</p>
               </div>
             </a>
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-1-banhmichao.jpg" alt="">
+                <img class="item-img" src="public/images/Categories/cate-1-banhmichao.jpg" alt="">
                 <h5 class="item-name">Bánh mặn</h5>
                 <p class="item-des">Các loại bánh mặn</p>
               </div>
             </a>
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-3-keodua.png" alt="">
+                <img class="item-img" src="public/images/Categories/cate-3-keodua.png" alt="">
                 <h5 class="item-name">Kẹo</h5>
                 <p class="item-des">Các loại Kẹo</p>
               </div>
             </a>
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-4-hutieu.png" alt="">
+                <img class="item-img" src="public/images/Categories/cate-4-hutieu.png" alt="">
                 <h5 class="item-name">Noodle</h5>
                 <p class="item-des">Các loại Noodle</p>
               </div>
             </a>
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-5-caloc.jpg" atl="">
+                <img class="item-img" src="public/images/Categories/cate-5-caloc.jpg" atl="">
                 <h5 class="item-name">Hải sản</h5>
                 <p class="item-des">Các loại hải sản</p>
               </div>
             </a>
             <a href="">
               <div class="cate-item">
-                <img class="item-img" src="images/Categories/cate-6-nuocdua.jpg" alt="">
+                <img class="item-img" src="public/images/Categories/cate-6-nuocdua.jpg" alt="">
                 <h5 class="item-name">Đồ uống</h5>
                 <p class="item-des">Các loại đồ uống</p>
               </div>
@@ -137,32 +146,38 @@
     <!-- End categories -->
     <!-- Guarranty -->
     <div class="wrapper guarantee">
-      <h3 class="sub-title text-center" style="color: var(--green)">Cam Kết</h2>
-      <h2 class="title text-center" style="color: #fff">CAM KẾT CỦA BẾP MIỀN TÂY</h2>
-      <h5 class="slogan" style="color: #fff">Chung tôi luôn mong muốn đem đến cho bạn những dịch vụ tốt nhất!</h5>
-      <div class="guarantee-content ms-3" style="color: #fff;">
+      <h3 class="sub-title text-center" style="color: var(--bs-orange)">Cam Kết</h2>
+        <h2 class="title text-center" style="color: var(--blue)">CAM KẾT CỦA BẾP MIỀN TÂY</h2>
+        <h5 class="slogan" style="color: #d19d2b"><b>Chung tôi luôn mong muốn đem đến cho bạn những dịch vụ tốt
+            nhất!</b></h5>
+        <div class="guarantee-content ms-3" style="color: #fff;">
           <div class="content-item">
-              <h4 class="guarantee-title">MIỄN PHÍ VẬN CHUYỂN</h4>
-              <p class="guarantee-des">Miễn phí giao hàng cho đơn hàng trên 500.000đ. Miễn phí giao hàng cho khách hàng thân thiết, miễn phí giao hàng nội ô Cần Thơ.</p>
+            <h4>
+              <MIỄN class="guarantee-title" style="color: var(--blue)">MIỄN PHÍ VẬN CHUYỂN
+            </h4>
+            <p class="guarantee-des" style="color: green"><b>Miễn phí giao hàng cho đơn hàng trên 500.000đ. Miễn phí
+                giao hàng cho khách hàng thân thiết, miễn phí giao hàng nội ô Cần Thơ.</b></p>
           </div>
           <div class="content-item">
-              <h4 class="guarantee-title">THANH TOÁN DỄ DÀNG</h4>
-              <p class="guarantee-des">Thanh toán trực tiếp khi nhận hàng, thanh toán qua thẻ ngân hàng, ví điện tử.</p>
+            <h4 class="guarantee-title" style="color: var(--blue)">THANH TOÁN DỄ DÀNG</h4>
+            <p class="guarantee-des" style="color: green"><b>Thanh toán trực tiếp khi nhận hàng, thanh toán qua thẻ ngân
+                hàng, ví điện tử.</b></p>
           </div>
           <div class="content-item">
-              <h4 class="guarantee-title">HỖ TRỢ ONLINE 24/7</h4>
-              <p class="guarantee-des">Khi có vấn đề cần trợ giúp, hãy gọi cho Bếp để được giúp đỡ. Số điện thoại 0123456789</p>
+            <h4 class="guarantee-title" style="color: var(--blue)">HỖ TRỢ ONLINE 24/7</h4>
+            <p class="guarantee-des" style="color: green"><b>Khi có vấn đề cần trợ giúp, hãy gọi cho Bếp để được giúp
+                đỡ. Số điện thoại 0123456789.</b></p>
           </div>
-      </div>
-  </div>
-  <!-- End guarranty -->
+        </div>
+    </div>
+    <!-- End guarranty -->
   </main>
   <footer class="bg-footer">
     <div class="wrapper bg-footer ">
       <div class="container">
         <div class="footer">
           <div class="footer-intro">
-            <img class="footer-intro-img mb-2" src="images/logo.png" alt="logo">
+            <img class="footer-intro-img mb-2" src="public/images/logo.png" alt="logo">
             <p class="footer-intro-content"><b class="footer-intro-content">Bếp Miền Tây </b>là Nơi Kết Nối
               Giữa Hương Sắc và Truyền Thống, Hòa Mình Trong Vị Ngọt Đắng của Miền Tây: Khám Phá Tinh Hoa
               Ẩm Thực!!.</p>
@@ -198,19 +213,28 @@
     <!--về đầu trang-->
     <a class="on-top" href=""></a>
   </footer>
+  <!-- JQuery -->
+  <script src="./public/js/jquery.js"></script>
+
+  <!-- Javascript for Bootstrap -->
+  <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- JS menu bar -->
   <script>
-    window.addEventListener('scroll', function() {
-    var nav = document.getElementById('mainNav');
-    var navPosition = nav.offsetTop + nav.offsetHeight;
-
-    if (window.screenY > navPosition) {
-        nav.classList.add('fixed');
-    } else {
-        nav.classList.remove('fixed');
-    }
-});
-
+      $(document).ready(function () {
+          $(window).scroll(function () {
+              if ($(this).scrollTop()) {
+                  $('header').addClass('sticky');
+              }
+              else {
+                  $('header').removeClass('sticky');
+              }
+          })
+      });
   </script>
+
+  <script src="./public/js/cart.js"></script>
+  <script src="./public/js/profile.js"></script>
 </body>
 
 

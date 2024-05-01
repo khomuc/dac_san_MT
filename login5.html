@@ -1,160 +1,124 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chào mừng đến với đặc sản miền Tây</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        .login-modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+        body {
+            background-color: #f5f5f5;
+            background-image: url(public/images/banner-3.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
-        .login-modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 30px;
-            border-radius: 5px;
-            width: 40%;
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
             max-width: 500px;
-        }
-        .close-button {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .form-control:focus {
-            border-color: #28a745;
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-        }
-        .social-login {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .social-login a {
-            display: block;
-            width: 100%;
-            padding: 10px 0;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            color: white;
-            margin-bottom: 10px;
-            transition: background-color 0.3s;
         }
-        .social-login a.facebook {
-            background-color: #3b5998;
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .social-login a.google {
-            background-color: #db4a39;
-        }
-        .social-login span {
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .social-login i {
-            margin-right: 10px;
-        }
-        .password-input-group {
+
+        .login-container .form-group {
             position: relative;
         }
-        .password-toggle-icon {
+
+        .login-container .password-toggle {
             position: absolute;
             top: 50%;
-            right: 15px;
+            right: 10px;
             transform: translateY(-50%);
             cursor: pointer;
-            color: #aaa;
         }
-        .password-toggle-icon:hover {
-            color: #28a745;
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Màu nền với độ trong suốt */
+            padding: 20px;
+            /* Lề bên trong để tạo khoảng cách với nội dung */
+            border-radius: 8px;
+            /* Làm tròn góc của hộp */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Đổ bóng */
+        }
+
+        .login-container h2 {
+            color: #333;
+            /* Màu văn bản */
+            font-size: 16px;
+            /* Kích thước văn bản */
+        }
+
+        .login-container:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Thay đổi màu nền khi hover */
         }
     </style>
 </head>
+
 <body>
-    <div id="loginModal" class="login-modal">
-        <div class="login-modal-content">
-            <span class="close-button">&times;</span>
-            <h2 class="text-center mb-4">Chào mừng bạn!</h2>
-            <form>
-                <div class="form-group">
-                    <label for="username">Tên đăng nhập:</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
-                </div>
-                <div class="form-group password-input-group">
-                    <label for="password">Mật khẩu:</label>
-                    <div>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
-                        <div class="password-toggle-icon" style="top: 50px;">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div> 
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Đăng nhập</button>
-            </form>
-            <hr>
-            <div class="social-login">
-                <a href="#" class="facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Tiếp tục với Facebook</span>
-                </a>
-                <a href="#" class="google">
-                    <i class="fab fa-google"></i>
-                    <span>Tiếp tục với Google</span>
-                </a>
+    <div class="login-container">
+        <h2>Chào mừng bạn!</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
             </div>
-            <div class="text-right mt-3">
-                <a href="#" class="text-success">Quên mật khẩu?</a>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                <div class="password-toggle" style="top: 50px;">
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
             </div>
+            <button type="submit" class="btn btn-success btn-block">Đăng nhập</button>
+        </form>
+        <hr>
+        <div class="text-center">
+            <p>Hoặc đăng nhập bằng:</p>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-danger btn-sm"><i class="fab fa-google"></i> Google</a>
         </div>
+        <div class="text-right mt-3">
+            <a href="#" class="text-success">Quên mật khẩu?</a>
+
+        </div>
+        <div class="text-right mt-3">
+
+            <a href="register3.html" class="text-success">Chưa có tài khoản</a>
+        </div>
+
     </div>
 
     <script>
-        // Lấy modal và nút đóng
-        var modal = document.getElementById("loginModal");
-        var closeButton = document.getElementsByClassName("close-button")[0];
-
-        // Hiện modal khi người dùng bấm vào nút
-        var loginButton = document.createElement("button");
-        loginButton.textContent = "Đăng nhập";
-        loginButton.classList.add("btn", "btn-success");
-        loginButton.addEventListener("click", function() {
-            modal.style.display = "block";
-        });
-        document.body.appendChild(loginButton);
-
-        // Đóng modal khi người dùng bấm vào nút đóng hoặc bên ngoài modal
-        closeButton.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
-        window.addEventListener("click", function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        });
-
-        // Hiện/ẩn mật khẩu
-        var passwordInput = document.getElementById("password");
-        var passwordToggleIcon = document.querySelector(".password-toggle-icon i");
-
-        passwordToggleIcon.addEventListener("click", function() {
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                passwordToggleIcon.classList.remove("fa-eye");
-                passwordToggleIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                passwordToggleIcon.classList.remove("fa-eye-slash");
-                passwordToggleIcon.classList.add("fa-eye");
-            }
+        document.querySelectorAll('.toggle-password').forEach(function (togglePassword) {
+            togglePassword.addEventListener('click', function () {
+                var passwordInput = this.closest('.form-group').querySelector('input[type="password"]');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    this.classList.remove('fa-eye');
+                    this.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password'; this.classList.remove('fa-eye-slash');
+                    this.classList.add('fa-eye');
+                }
+            });
         });
     </script>
 </body>
+
 </html>
