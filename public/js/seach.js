@@ -1,31 +1,33 @@
-function searchProduct(){
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var code = urlParams.get('key');
-    let productList = document.querySelector('#menuSearch');
-    for(i=0; i<localStorage.length; i++){
-        if(localStorage.key(i).startsWith('sp')){
-            var pd = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            if(pd.name.toLowerCase().includes(code.toLowerCase())){
-                productList.innerHTML += `
-                <div class="cate-item">
-                <a href="/detail.html?id=${localStorage.key(i)}"><img class="item-img" src="${pd.img}" alt=""></a>
-                <h3 class="item-name">${pd.name}</h3>
-                <div class="star-vote mt-1">
-                    <i class="fas fa-star" style="color: #FFCC33; margin-left:1px; margin-right:1px; font-size: 16px;"></i>
-                    <i class="fas fa-star" style="color: #FFCC33; margin-left:1px; margin-right:1px; font-size: 16px;"></i>
-                    <i class="fas fa-star" style="color: #FFCC33; margin-left:1px; margin-right:1px; font-size: 16px;"></i>
-                    <i class="fas fa-star-half-alt" style="color: #FFCC33; margin-left:1px; margin-right:1px; font-size: 16px;"></i>
-                    <i class="far fa-star" style="color: #FFCC33; margin-left:1px; margin-right:1px; font-size: 16px;"></i>
-                </div>
-                <div class="price-button">
-                    <p style="color: var(--green); font-weight: 700; font-size:22px; margin-bottom:0; line-height: 38px">${pd.price}đ</p>
-                    <button class="btn btn-primary" style="font-size: 14px; font-weight: 700;" onclick="addToCart('${localStorage.key(i)}')">Thêm vào giỏ</button>
-                </div>
-                </div>
-                  `;
-            }
-        }
-    }
+// Mảng dữ liệu sản phẩm (mô phỏng dữ liệu từ cơ sở dữ liệu)
+const products = [
+    { id: 1, name: "Bánh mì chảo", price: 25000 },
+    { id: 2, name: "Bánh pía", price: 7000 },
+    { id: 3, name: "Kẹo dừa", price: 1000 },
+    { id: 4, name: "Cơm tấm", price: 25000 }
+];
 
+// Hàm tìm kiếm sản phẩm
+function search() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const searchResults = products.filter(product => {
+        return product.name.toLowerCase().includes(searchTerm);
+    });
+
+    displayResults(searchResults);
+}
+
+// Hàm hiển thị kết quả tìm kiếm
+function displayResults(results) {
+    const searchResultsDiv = document.getElementById("searchResults");
+    searchResultsDiv.innerHTML = ""; // Xóa nội dung hiện tại
+
+    if (results.length === 0) {
+        searchResultsDiv.innerHTML = "<p>Không tìm thấy kết quả.</p>";
+    } else {
+        results.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.innerHTML = `<p><strong>${product.name}</strong> - Giá: ${product.price} VNĐ</p>`;
+            searchResultsDiv.appendChild(productDiv);
+        });
+    }
 }

@@ -47,7 +47,7 @@ p{
 
 .footer-nav-title{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     color: #f5f5dc;
 }
 
@@ -60,7 +60,7 @@ p.footer-nav-link{
 }
 
 p.footer-nav-link a{
-    font-size: 14px;
+    font-size: 20px;
     color: #f5f5dc;
     text-decoration: none;
 }

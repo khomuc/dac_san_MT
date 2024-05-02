@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+p{
+    color:#27AE60
+}
 img.about-logo{
     width: 380px;
     margin-left: 25px;
