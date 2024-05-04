@@ -1,157 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="public/css/login&register.css">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="./public/images/Logo/ICON.png">
+    <link rel="stylesheet" href="./public/css/auth.css">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/base.css">
+    <link rel="stylesheet" href="./public/css/reset.css">
     <style>
-        body{
-            background-image: url(public/images/banner-3.png);
+        body {
+            background-color: #f5f5f5;
+            background-image: url(public/images/dangnhap/banner\ đăng\ nhập.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-container .form-group {
+            position: relative;
+        }
+
+        .login-container .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Màu nền với độ trong suốt */
+            padding: 20px;
+            /* Lề bên trong để tạo khoảng cách với nội dung */
+            border-radius: 8px;
+            /* Làm tròn góc của hộp */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Đổ bóng */
+        }
+
+        .login-container h2 {
+            color: #ee4d2d2;
+            /* Màu văn bản */
+        }
+
+        .login-container:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Thay đổi màu nền khi hover */
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2 class="text-center mb-4">Đăng ký thành viên!</h2>
-        <form id="registerForm">
-            <div class="form-group">
-                <label for="username">Tên đăng nhập:</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
-                <div class="invalid-feedback">Vui lòng nhập tên đăng nhập.</div>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email" required>
-                <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
-            </div>
-            <div class="form-group password-input-group">
-                <label for="password">Mật khẩu:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
-                <div class="password-toggle"  style="top: 50px;">
-                    <i class="fas fa-eye toggle-password"></i>
-                </div>
-                <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
-            </div>
-            <div class="form-group password-input-group">
-                <label for="confirmPassword">Xác nhận mật khẩu:</label>
-                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
-                <div class="password-toggle"  style="top: 50px;">
-                    <i class="fas fa-eye toggle-password"></i>
-                </div>
-                <div class="invalid-feedback">Mật khẩu không khớp.</div>
-            </div>
-<button type="submit" class="btn btn-success btn-block button">Đăng ký</button>
-        </form>
-        <hr>
-        <div class="text-center">
-            <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a href="#" class="btn btn-danger btn-sm"><i class="fab fa-google"></i> Google</a>
+        <form name="regfr" action="login5.html" method="GET" enctype="multipart/form-data"  onsubmit="return valid()">
+    <!--registerForm-->
+    <div class="form-floating mb-3">
+        <input name="name" type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" style="border: 1px solid #ced4da">
+        <label for="floatingInputUsername">Họ và tên<b style="color: red">(*)</b></label>
+        <p id="checkName" style="color: red;"></p>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input name="email" type="text" class="form-control" id="floatingInputEmail" placeholder="name@example.com" onchange="checkEmailAddress(this.value)" style="border: 1px solid #ced4da">
+        <label for="floatingInputEmail">Địa chỉ email<b style="color: red">(*)</b></label>
+        <p id="checkMail" style="color: red;"></p>
+      </div>
+
+      <hr>
+
+      <div class="form-floating mb-3 password-input-group">
+        <input name="mk"type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Đặt mật khẩu<b style="color: red">(*)</b></label>
+        <div class="password-toggle">
+            <i class="fas fa-eye toggle-password"></i>
         </div>
-        <div class="text-center mt-3">
-            <p>Bạn đã có tài khoản? <a href="login5.html" class="text-success">Đăng nhập tại đây!</a></p>
+        <p id="checkPassword" style="color: red;"></p>
+      </div>
+
+      <div class="form-floating mb-3 password-input-group">
+        <input name="pre_mk" type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+        <label for="floatingPasswordConfirm">Nhập lại mật khẩu<b style="color: red">(*)</b></label>
+        <div class="password-toggle">
+            <i class="fas fa-eye toggle-password"></i>
         </div>
+        <p id="checkPrePassword" style="color: red;"></p>
     </div>
+    
+      <hr>
 
+      <div class="form-floating mb-3">
+        <input name="phone" type="text" class="form-control" id="floatingInputPhone" placeholder="myusername" style="border: 1px solid #ced4da">
+        <label for="floatingInputUsername">Số điện thoại<b style="color: red">(*)</b></label>
+        <p id="checkPhone" style="color: red;"></p>
+      </div>
+      <div class="form-floating mb-3">
+        <input name="address" type="text" class="form-control" id="floatingInputAddress" placeholder="myusername" style="border: 1px solid #ced4da">
+        <label for="floatingInputUsername">Địa chỉ<b style="color: red">(*)</b></label>
+        <p id="checkAddress" style="color: red;"></p>
+      </div>
+      <hr>
+      <div class="d-grid mb-2">
+          <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">ĐĂNG KÝ</button>
+      </div>
+      <a class="d-block text-center mt-2 small" href="/login5.html">Bạn đã có tài khoản? Đăng nhập</a>
+    </form>
+        
+    </div>
     <script>
-                // Lấy các yếu tố cần thiết
-        const form = document.getElementById('registerForm');
-        const usernameInput = document.getElementById('username');
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const confirmPasswordInput = document.getElementById('confirmPassword');
-        const passwordToggleIcons = document.querySelectorAll('.password-toggle i');
+    // Thêm sự kiện toggle hiển thị mật khẩu
+    const passwordToggleIcons = document.querySelectorAll('.toggle-password');
 
-        // Thêm sự kiện submit vào form
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Ngăn không cho form tự động submit
-
-            // Kiểm tra tính hợp lệ của các trường
-            let isValid = true;
-            if (!usernameInput.value) {
-                usernameInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                usernameInput.classList.remove('is-invalid');
-            }
-
-            if (!emailInput.value || !isValidEmail(emailInput.value)) {
-                emailInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                emailInput.classList.remove('is-invalid');
-            }
-
-            if (!passwordInput.value) {
-                passwordInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                passwordInput.classList.remove('is-invalid');
-            }
-
-            if (!confirmPasswordInput.value || passwordInput.value !== confirmPasswordInput.value) {
-                confirmPasswordInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                confirmPasswordInput.classList.remove('is-invalid');
-            }
-
-            // Nếu tất cả các trường hợp hợp lệ, gửi dữ liệu lên server
-            if (isValid) {
-                const formData = {
-                    username: usernameInput.value,
-                    email: emailInput.value,
-                    password: passwordInput.value
-                };
-
-                // Gửi dữ liệu lên server bằng AJAX
-                fetch('/register', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-.then(response => {
-                    if (response.ok) {
-                        // Đăng ký thành công, chuyển hướng người dùng đến trang đăng nhập
-                        window.location.href = '/login';
-                    } else {
-                        // Đăng ký thất bại, hiển thị thông báo lỗi
-                        alert('Đăng ký thất bại. Vui lòng thử lại.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Lỗi:', error);
-                    alert('Đã có lỗi xảy ra. Vui lòng thử lại sau.');
-                });
-            }
-        });
-
-        // Thêm sự kiện toggle hiển thị mật khẩu
-        passwordToggleIcons.forEach(icon => {
-            icon.addEventListener('click', () => {
-                const passwordInput = icon.closest('.password-input-group').querySelector('input[type="password"]');
-                if (passwordInput.type === 'password') {
-                    passwordInput.type = 'text';
-                    icon.classList.remove('fa-eye');
-                    icon.classList.add('fa-eye-slash');
-                } else {
-                    passwordInput.type = 'password';
-                    icon.classList.remove('fa-eye-slash');
-                    icon.classList.add('fa-eye');
-                }
-            });
-        });
-
-        // Hàm kiểm tra email hợp lệ
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
+    passwordToggleIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        const passwordInput = icon.closest('.password-input-group').querySelector('input[type="password"]');
+        if (passwordInput.type === 'password') { 
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
         }
+    });
+});
+    </script>
 
     </script>
+    <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./public/js/auth.js"></script>
+    <script src="/public/js/validFormReg.js"></script>
 </body>
+
 </html>

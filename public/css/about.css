@@ -3,9 +3,7 @@
     display: flex;
     justify-content: space-evenly;
 }
-p{
-    color:#27AE60
-}
+
 img.about-logo{
     width: 380px;
     margin-left: 25px;
@@ -138,14 +136,14 @@ img.about-logo{
 .title-4k{
     font-weight: bold;
     font-size: 20px;
-    color: #27AE60;
+    color: #f5f5dc;
     margin-bottom: 10px;
 }
 
 .content-4k{
     font-size: 16px;
     text-align: justify;
-    color: #000000;
+    color: #f5f5dc;
     margin-bottom: 10px;
 }
 

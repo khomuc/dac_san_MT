@@ -2,228 +2,216 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu</title>
-    <link rel="stylesheet" href="public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
-    <script src="public/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="shortcut icon" href="public/images/logo.png">
-    <link rel="stylesheet" href="./public/font/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="./public/css/base.css">
-    <link rel="stylesheet" href="./public/css/reset.css">
-    <link rel="stylesheet" href="./public/css/header.css">
-    <link rel="stylesheet" href="./public/css/footer.css">
-    <link rel="stylesheet" href="./public/css/guarantee.css">
-    <link rel="stylesheet" href="./public/css/home.css">
-    <link rel="stylesheet" href="./public/css/about.css">
-    <link rel="stylesheet" href="./public/css/profile.css">
-    <link rel="stylesheet" href="./public/css/cart.css">
-    <link rel="stylesheet" href="public/Product.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="shortcut icon" href="./public/images/Logo/ICON.png">
+  <link rel="stylesheet" href="./public/font/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./public/css/base.css">
+  <link rel="stylesheet" href="./public/css/reset.css">
+  <link rel="stylesheet" href="./public/css/header.css">
+  <link rel="stylesheet" href="./public/css/footer.css">
+  <link rel="stylesheet" href="./public/css/guarantee.css">
+  <link rel="stylesheet" href="./public/css/home.css">
+  <link rel="stylesheet" href="./public/css/about.css">
+  <link rel="stylesheet" href="./public/css/profile.css">
+  <link rel="stylesheet" href="./public/css/cart.css">
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <div id="wrapper" class="wrapper position-fixed top-0">
-            <div class="container mt-1 mb-2">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div id="header-logo" class="col-xl-2 col-md-1">
-                        <a href="home.html"><img class="w-75 rounded-5" src="public/images/logo.png" alt="Logo"></a>
-                    </div>
-                    <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
-                        <nav class="nav nav-pills flex-column flex-sm-row">
-                            <a class="flex-sm-fill text-sm-center nav-link" href="home.html">Trang chủ</a>
-                            <a class="flex-sm-fill text-sm-center nav-link" href="Product.html">Sản phẩm</a>
-                            <a class="flex-sm-fill text-sm-center nav-link active" href="about.html">Giới thiệu</a>
-                        </nav>
-                    </div>
-                    <div id="header-search" class="col-xl-3 col-md-7">
-                        <div class="form-text">
-                            <form action="" method="get">
-                                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
+<body onload="showUser()">
+  <!-- Header -->
+  <!-- header -->
+  <header>
+    <div id="wrapper" class="wrapper position-fixed top-0">
+      <div class="container mt-1 mb-2">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div id="header-logo" class="col-xl-3 col-md-1">
+            <a href="/home.html"><img class="w-50" src="public/images/Logo/Artboard 2.png" alt="Logo"></a>
+          </div>
+          <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+              <a class="flex-sm-fill text-sm-center nav-link " href="home.html">Trang chủ</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="Product.html">Sản phẩm</a>
+              <a class="flex-sm-fill text-sm-center nav-link active" href="about.html">Giới thiệu</a>
+            </nav>
+          </div>
+          <div id="header-search" class="col-xl-3 col-md-7">
+            <div class="form-text">
+              <form action="" method="get">
+                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
 
-                            </form>
-                        </div>
-                    </div>
-                    <div id="header-sc" class="col-xl-1 col-md-0 d-flex justify-content-end">
-                        <a href="Search.html" id="cart" class="rounded-circle text-center" onclick="seach()" style="width: 50px;"><i
-                                class="fas fa-search"></i></a>
-                    </div>
-                    <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
-                        <a href="cart.html" id="cart" class="rounded-circle text-center"
-                            style="width: 50px; height: 50px;"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                    <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
-                        <img id="avatar" class="rounded-circle dropdown-toggle" style="width: 50px"
-                            src="public/images/giothieu/avt.jpg" alt="avatar">
-                        <ul id="sub-nav" class="position-absolute top-100 end-0">
-                            <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Cá
-                                    nhân</a></li>
-                            <li><a class="dropdown-item" href="login5.html"><i class="fas fa-sign-out-alt me-2"></i>Đăng
-                                    xuất</a></li>
-                        </ul>
-
-                    </div>
-
-                </div>
+              </form>
             </div>
+          </div>
+          <div id="header-sc" class="col-xl-1 col-md-0 d-flex justify-content-end">
+            <a href="Search.html" id="cart" class="rounded-circle text-center" style="width: 50px;"><i
+                class="fas fa-search"></i></a>
+          </div>
+          <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
+            <a href="cart.html" id="cart" class="rounded-circle text-center" style="width: 50px; height: 50px;"><i
+                class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
+            
+
+          </div>
+
         </div>
-    </header>
-
-    <div>
-        <img src="public/images/banner.png" alt="banner" class="img-fluid">
+      </div>
     </div>
-    <div id="searchResults">
-        <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
-    </div>
+  </header>
+  <!-- End header -->
 
+  <!-- Banner -->
+  <div>
+    <img src="public/images/banner.png" alt="banner" class="img-fluid">
+  </div>
+
+  <div style="background-color: #f5f5dc;">
     <!-- About BMT-->
-    <div class="container pt-3 pb-3">
-        <h3 class="sub-title text-center" style="color: var(--bs-orange)">Giới thiệu</h2>
-            <h2 class="title text-center" style="color: var(--bs-primary)">TẠI SAO NÊN CHỌN BẾP MIỀN TÂY?</h2>
-            <div class="about mt-4">
-                <img class="about-logo rounded-5" src="public/images/logo.png" alt="BMT's logo">
-                <div class="about-content mt-4">
-                    <h2 class="about-content-title">Xin chào! Chúng mình là BẾP MIỀN TÂY</h2>
-                    <p>“Bếp Miền Tây” là nơi bạn có thể gửi gắm, tin tưởng tìm kiếm những món ăn đặc sắc, ấn tượng khi
-                        đi du lịch tại các tỉnh miền Tây.</p>
-                    <a class="btn btn-primary" href="/product.html">Hãy ghé chúng mình nhé!</a>
-                </div>
-            </div>
+    <div class="container pt-3 pb-3" style="background-color: #f5f5dc;">
+      <h3 class="sub-title text-center" style="color: #004225">Giới thiệu</h2>
+        <h2 class="title text-center" style="color: #EE4D2D">TẠI SAO NÊN CHỌN BẾP MIỀN TÂY?</h2>
+        <div class="about mt-4">
+          <img class="about-logo" src="public/images/Logo/Artboard 2_1.png" style="border-radius: 50%;"
+            alt="BMT's logo">
+          <div class="about-content mt-4">
+            <h2 class="about-content-title" style="color: #004225;">Xin chào, BẾP MIỀN TÂY đây!</h2>
+            <p style="color: #004225;">“Bếp Miền Tây” là nơi bạn có thể gửi gắm, tin tưởng tìm kiếm những món ăn đặc
+              sắc, ấn tượng khi đi du lịch tại các tỉnh miền Tây.</p>
+            <a class="btn btn-primary" href="/product.html">Hãy ghé chúng mình nhé!</a>
+          </div>
+        </div>
     </div>
 
     <!-- About 4K standard -->
-    <div class="wrapper pt-3 pb-3" style="background-color: var(--body)!important;">
-        <div class="container">
-            <h3 class="sub-title text-center" style="color: var(--bs-orange)">Giới thiệu</h2>
-                <h2 class="title text-center" style="color: var(--blue)">BẾP ĐẠT CHUẨN </h2>
-                <div class="organic">
-                    <div class="vege-4k pe-5 ps-5">
-                        <img class="me-2" src="public/images/giothieu/icon1.jpg" alt="">
-                        <div class="vege-4k-content">
-                            <p class="title-4k">Nguồn gốc</p>
-                            <p class="content-4k">Bếp Miền Tây luôn giới thiệu đến khách hàng những món ăn có nguồn gốc
-                                xuất xứ rõ ràng.</p>
-                        </div>
-                    </div>
+    <div class="wrapper pt-3 pb-3" style="background-color: #004225">
+      <div class="container">
+        <h3 class="sub-title text-center">Giới thiệu</h2>
+          <h2 class="title text-center" style="color: #EE4D2D">BẾP ĐẠT CHUẨN </h2>
+          <div class="organic">
+            <div class="vege-4k pe-5 ps-5">
+              <img class="me-2" src="public/images/giothieu/icon1.jpg" alt="">
+              <div class="vege-4k-content">
+                <p class="title-4k">Nguồn gốc</p>
+                <p class="content-4k">Bếp Miền Tây luôn giới thiệu đến khách hàng những món ăn có nguồn gốc xuất xứ rõ
+                  ràng.</p>
+              </div>
+            </div>
 
-                    <div class="vege-4k ps-5 pe-5">
-                        <img class="me-2" src="public/images/giothieu/icon2.jpg" alt="">
-                        <div class="vege-4k-content">
-                            <p class="title-4k">Giá cả</p>
-                            <p class="content-4k">Bếp Miền Tây niêm yết giá cả hợp lý phù hợp với mọi khách hàng có nhu
-                                cầu sử dụng.</p>
-                        </div>
-                    </div>
+            <div class="vege-4k ps-5 pe-5">
+              <img class="me-2" src="public/images/giothieu/icon2.jpg" alt="">
+              <div class="vege-4k-content">
+                <p class="title-4k">Giá cả</p>
+                <p class="content-4k">Bếp Miền Tây niêm yết giá cả hợp lý phù hợp với mọi khách hàng có nhu cầu sử dụng.
+                </p>
+              </div>
+            </div>
 
-                    <div class="vege-4k pe-5 ps-5 vege-4k-mobile">
-                        <div class="vege-4k-content">
-                            <p class="title-4k">Vệ sinh an toàn thực phẩm</p>
-                            <p class="content-4k">Bếp Miền Tây hứa hẹn cung cấp thực phẩm ngon, sạch, an toàn với người
-                                dùng.</p>
-                        </div>
-                        <img class="ms-2" src="public/images/giothieu/icon3.jpg" alt="">
-                    </div>
+            <div class="vege-4k pe-5 ps-5 vege-4k-mobile">
+              <div class="vege-4k-content">
+                <p class="title-4k">Vệ sinh an toàn thực phẩm</p>
+                <p class="content-4k">Bếp Miền Tây hứa hẹn cung cấp thực phẩm ngon, sạch, an toàn với người dùng.</p>
+              </div>
+              <img class="ms-2" src="public/images/giothieu/icon3.jpg" alt="">
+            </div>
 
-                    <div class="vege-4k ps-5 pe-5 vege-4k-mobile">
-                        <div class="vege-4k-content">
-                            <p class="title-4k">Hương vị</p>
-                            <p class="content-4k">Qua nhiều sự tuyển chọn, chúng tôi cam đoan mang đến hương vị chuẩn
-                                nhất.</p>
-                        </div>
-                        <img class="ms-2" src="public/images/giothieu/icon4.jpg" alt="">
-                    </div>
+            <div class="vege-4k ps-5 pe-5 vege-4k-mobile">
+              <div class="vege-4k-content">
+                <p class="title-4k">Hương vị</p>
+                <p class="content-4k">Qua nhiều sự tuyển chọn, chúng tôi cam đoan mang đến hương vị chuẩn nhất.</p>
+              </div>
+              <img class="ms-2" src="public/images/giothieu/icon4.jpg" alt="">
+            </div>
 
-                </div>
-        </div>
+          </div>
+      </div>
     </div>
 
     <!-- Guarranty -->
     <div class="wrapper guarantee">
-        <h3 class="sub-title text-center" style="color: var(--bs-orange)">Cam Kết</h2>
-            <h2 class="title text-center" style="color: var(--blue)">CAM KẾT CỦA BẾP MIỀN TÂY</h2>
-            <h5 class="slogan" style="color: #d19d2b"><b>Chung tôi luôn mong muốn đem đến cho bạn những dịch vụ tốt
-                    nhất!</b></h5>
-            <div class="guarantee-content ms-3" style="color: #fff;">
-                <div class="content-item">
-                    <h4>
-                        <MIỄN class="guarantee-title" style="color: var(--blue)">MIỄN PHÍ VẬN CHUYỂN
-                    </h4>
-                    <p class="guarantee-des" style="color: green"><b>Miễn phí giao hàng cho đơn hàng trên 500.000đ. Miễn
-                            phí giao hàng cho khách hàng thân thiết, miễn phí giao hàng nội ô Cần Thơ.</b></p>
-                </div>
-                <div class="content-item">
-                    <h4 class="guarantee-title" style="color: var(--blue)">THANH TOÁN DỄ DÀNG</h4>
-                    <p class="guarantee-des" style="color: green"><b>Thanh toán trực tiếp khi nhận hàng, thanh toán qua
-                            thẻ ngân hàng, ví điện tử.</b></p>
-                </div>
-                <div class="content-item">
-                    <h4 class="guarantee-title" style="color: var(--blue)">HỖ TRỢ ONLINE 24/7</h4>
-                    <p class="guarantee-des" style="color: green"><b>Khi có vấn đề cần trợ giúp, hãy gọi cho Bếp để được
-                            giúp đỡ. Số điện thoại 0123456789.</b></p>
-                </div>
-            </div>
+      <h3 class="sub-title text-center" style="color: #ee4d2d">Cam Kết</h2>
+        <h2 class="title text-center" style="color: #ee4d2d">CAM KẾT CỦA BẾP MIỀN TÂY</h2>
+        <h5 class="slogan" style="color: #d19d2b"><b>Chúng tôi luôn mong muốn đem đến cho bạn những dịch vụ tốt
+            nhất!</b></h5>
+        <div class="guarantee-content ms-3" style="color: #fff;">
+          <div class="content-item">
+            <h4>
+              <MIỄN class="guarantee-title" style="color: #ee4d2d">MIỄN PHÍ VẬN CHUYỂN
+            </h4>
+            <p class="guarantee-des" style="color: #f5f5dc;"><b>Miễn phí giao hàng cho đơn hàng trên 500.000đ. Miễn phí
+                giao hàng cho khách hàng thân thiết, miễn phí giao hàng nội ô Cần Thơ.</b></p>
+          </div>
+          <div class="content-item">
+            <h4 class="guarantee-title" style="color: #ee4d2d">THANH TOÁN DỄ DÀNG</h4>
+            <p class="guarantee-des" style="color: #f5f5dc"><b>Thanh toán trực tiếp khi nhận hàng, thanh toán qua thẻ
+                ngân
+                hàng, ví điện tử.</b></p>
+          </div>
+          <div class="content-item">
+            <h4 class="guarantee-title" style="color: #ee4d2d">HỖ TRỢ ONLINE 24/7</h4>
+            <p class="guarantee-des" style="color: #f5f5dc"><b>Khi có vấn đề cần trợ giúp, hãy gọi cho Bếp để được giúp
+                đỡ. Số điện thoại 0123456789.</b></p>
+          </div>
+        </div>
     </div>
     <!-- End guarranty -->
 
     <!-- Footer -->
     <footer class="bg-footer">
-        <div class="wrapper bg-footer ">
-          <div class="container">
-            <div class="footer">
-              <div class="footer-intro">
-                <img class="footer-intro-img mb-2" src="public/images/logo-2.jpg" alt="logo">
-                <p class="footer-intro-content"><b class="footer-intro-content">Bếp Miền Tây </b>là Nơi Kết Nối
-                  Giữa Hương Sắc và Truyền Thống, Hòa Mình Trong Vị Ngọt Đắng của Miền Tây: Khám Phá Tinh Hoa
-                  Ẩm Thực!!.</p>
-                <p class="footer-intro-content">© 2024 Bep Mien Tay. All rights reserved.</p>
+      <div class="wrapper bg-footer ">
+        <div class="container">
+          <div class="footer">
+            <div class="footer-intro">
+              <img class="footer-intro-img mb-2" src="public/images/Logo/Artboard 2_1.png" alt="logo">
+              <p class="footer-intro-content"><b class="footer-intro-content">Bếp Miền Tây </b>là Nơi Kết Nối
+                Giữa Hương Sắc và Truyền Thống, Hòa Mình Trong Vị Ngọt Đắng của Miền Tây: Khám Phá Tinh Hoa
+                Ẩm Thực!!.</p>
+              <p class="footer-intro-content">© 2024 Bep Mien Tay. All rights reserved.</p>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-nav-content" style="width: 40%">
+                <h3 class="footer-nav-title center">LIÊN HỆ</h3>
+                <p class="footer-nav-link"><i class="fas fa-phone m-1"></i>0123 456 789</p>
+                <p class="footer-nav-link"><i class="fas fa-envelope-open me-1"></i>bepmientay@gmail.com</p>
+                <p class="footer-nav-link"><a href="#"><i class="fab fa-facebook-square me-1"></i>Bếp Miền
+                    Tây</a></p>
+                <p class="footer-nav-link"><i class="fas fa-map-marker-alt me-1"></i>P.Tân An, Q.Ninh Kiều,
+                  Tp.Cần Thơ</p>
               </div>
-              <div class="footer-nav">
-                <div class="footer-nav-content" style="width: 40%">
-                  <h3 class="footer-nav-title center">LIÊN HỆ</h3>
-                  <p class="footer-nav-link"><i class="fas fa-phone m-1"></i>0123 456 789</p>
-                  <p class="footer-nav-link"><i class="fas fa-envelope-open me-1"></i>bepmientay@gmail.com</p>
-                  <p class="footer-nav-link"><a href="#"><i class="fab fa-facebook-square me-1"></i>Bếp Miền
-                      Tây</a></p>
-                  <p class="footer-nav-link"><i class="fas fa-map-marker-alt me-1"></i>P.Tân An, Q.Ninh Kiều,
-                    Tp.Cần Thơ</p>
-                </div>
-                <div class="footer-nav-content center">
-                  <h3 class="footer-nav-title">DANH MỤC</h3>
-                  <p class="footer-nav-link"><a href="">Trang chủ</a></p>
-                  <p class="footer-nav-link"><a href="">Sản phẩm</a></p>
-                  <p class="footer-nav-link"><a href="">Giới thiệu</a></p>
-                </div>
-                <div class="footer-nav-content">
-                  <h3 class="footer-nav-title ">ĐẶC SẢN</h3>
-                  <p class="footer-nav-link"><a href="">Noodle</a></p>
-                  <p class="footer-nav-link"><a href="">Kẹo</a></p>
-                  <p class="footer-nav-link"><a href="">Bánh ngọt</a></p>
-                  <p class="footer-nav-link"><a href="">Bánh mặn</a></p>
-                  <p class="footer-nav-link"><a href="">Hải sản</a></p>
-                  <p class="footer-nav-link"><a href="">Đồ uống</a></p>
-                </div>
+              <div class="footer-nav-content center">
+                <h3 class="footer-nav-title">DANH MỤC</h3>
+                <p class="footer-nav-link"><a href="home.html">Trang chủ</a></p>
+                <p class="footer-nav-link"><a href="Product.html">Sản phẩm</a></p>
+                <p class="footer-nav-link"><a href="about.html">Giới thiệu</a></p>
+              </div>
+              <div class="footer-nav-content">
+                <h3 class="footer-nav-title ">ĐẶC SẢN</h3>
+                <p class="footer-nav-link"><a href="">Món nước</a></p>
+                <p class="footer-nav-link"><a href="">Món khô</a></p>
+                <p class="footer-nav-link"><a href="">Bánh kẹo</a></p>
               </div>
             </div>
           </div>
         </div>
-        <!--về đầu trang-->
-        <a class="on-top" href=""></a>
-      </footer>
+      </div>
+      <!--về đầu trang-->
+     <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button> -->
+     <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+    </footer>
     <!-- End footer -->
 
     <!-- Toast messsage when adding vege to cart -->
     <div id="toast-yes">
-        <div id="toast-yes-img" class="img"><i class="fas fa-thumbs-up"></i></div>
-        <div id="toast-yes-desc">A notification message..</div>
+      <div id="toast-yes-img" class="img"><i class="fas fa-thumbs-up"></i></div>
+      <div id="toast-yes-desc">A notification message..</div>
     </div>
 
     <div id="toast-no">
-        <div id="toast-no-img" class="img"><i class="fas fa-thumbs-down"></i></div>
-        <div id="toast-no-desc">A notification message..</div>
+      <div id="toast-no-img" class="img"><i class="fas fa-thumbs-down"></i></div>
+      <div id="toast-no-desc">A notification message..</div>
     </div>
 
     <!-- JQuery -->
@@ -234,20 +222,21 @@
 
     <!-- JS menu bar -->
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop()) {
-                    $('header').addClass('sticky');
-                }
-                else {
-                    $('header').removeClass('sticky');
-                }
-            })
-        });
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop()) {
+            $('header').addClass('sticky');
+          }
+          else {
+            $('header').removeClass('sticky');
+          }
+        })
+      });
     </script>
 
     <script src="./public/js/cart.js"></script>
     <script src="./public/js/profile.js"></script>
+    <script src="./public/js/auth.js"></script>
 </body>
 
 </html>

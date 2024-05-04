@@ -4,32 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="public/css/login&register.css">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="./public/images/Logo/ICON.png">
+    <link rel="stylesheet" href="./public/css/auth.css">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/base.css">
+    <link rel="stylesheet" href="./public/css/reset.css">
     <style>
-        body{
-            background-image: url(public/images/banner-3.png);
+        body {
+            background-color: #f5f5f5;
+            background-image: url(public/images/dangnhap/banner\ đăng\ nhập.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-container .form-group {
+            position: relative;
+        }
+
+        .login-container .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Màu nền với độ trong suốt */
+            padding: 20px;
+            /* Lề bên trong để tạo khoảng cách với nội dung */
+            border-radius: 8px;
+            /* Làm tròn góc của hộp */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Đổ bóng */
+        }
+
+        .login-container h2 {
+            color: #333;
+            /* Màu văn bản */
+            font-size: 40px;
+            /* Kích thước văn bản */
+        }
+
+        .login-container:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Thay đổi màu nền khi hover */
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
-        <h2>Chào mừng bạn!</h2>
+        <h2 class="text-center mb-4">Chào mừng bạn!</h2>
         <form>
             <div class="form-group">
                 <label for="username">Tên đăng nhập:</label>
-                <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
+                <input type="text" class="form-control" id="floatingInputEmail" placeholder="Nhập tên đăng nhập"
+                    required>
             </div>
-            <div class="form-group">
+            <div class="form-group password-input-group">
                 <label for="password">Mật khẩu:</label>
-                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
-                <div class="password-toggle" style="top: 50px;">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu" required>
+                <div class="password-toggle" style="top: 65px;">
                     <i class="fas fa-eye toggle-password"></i>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success btn-block button">Đăng nhập</button>
+            <div class="d-grid mb-2">
+                <button onclick="dangnhap(event)" type="submit"
+                    class="btn btn-lg btn-primary btn-login fw-bold text-uppercase">Đăng nhập</button>
+            </div>
         </form>
         <hr>
         <div class="text-center">
@@ -47,22 +112,26 @@
         </div>
 
     </div>
-
     <script>
-        document.querySelectorAll('.toggle-password').forEach(function (togglePassword) {
-            togglePassword.addEventListener('click', function () {
-                var passwordInput = this.closest('.form-group').querySelector('input[type="password"]');
+    // Thêm sự kiện toggle hiển thị mật khẩu
+    const passwordToggleIcons = document.querySelectorAll('.toggle-password');
+        passwordToggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                const passwordInput = icon.closest('.password-input-group').querySelector('input[type="password"]');
                 if (passwordInput.type === 'password') {
                     passwordInput.type = 'text';
-                    this.classList.remove('fa-eye');
-                    this.classList.add('fa-eye-slash');
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
                 } else {
-                    passwordInput.type = 'password'; this.classList.remove('fa-eye-slash');
-                    this.classList.add('fa-eye');
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
                 }
             });
         });
     </script>
+    <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./public/js/auth.js"></script>
 </body>
 
 </html>

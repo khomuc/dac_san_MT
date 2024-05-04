@@ -47,7 +47,7 @@ p{
 
 .footer-nav-title{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
     color: #f5f5dc;
 }
 
@@ -60,7 +60,7 @@ p.footer-nav-link{
 }
 
 p.footer-nav-link a{
-    font-size: 20px;
+    font-size: 14px;
     color: #f5f5dc;
     text-decoration: none;
 }
@@ -124,4 +124,26 @@ p.footer-nav-link a:hover{
         width: 20%;
         margin-top: 20px;
     }
+}
+
+/*NUT TOP*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 43px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ee4d2d;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #ffb000;
 }

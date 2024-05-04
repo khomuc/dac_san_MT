@@ -5,7 +5,6 @@
 }
 #header-logo{
     max-width: 200px;
-    border-radius: 50%;
 }
 #wrapper{
     background-color: transparent;
@@ -13,18 +12,18 @@
 }
 
 .fa-shopping-cart, .fa-caret-down, .fa-search{
-    color: white; 
+    color: #f5f5dc;
     line-height: 50px;
 }
 
 .fa-caret-down:hover{
     cursor: pointer;
-    color: #27AE60;
+    color: #004225;
 }
 
 header.sticky .fa-caret-down:hover{
     cursor: pointer;
-    color: #27AE60;
+    color: #004225;
 }
 
 #sub-nav{
@@ -32,7 +31,7 @@ header.sticky .fa-caret-down:hover{
 }
 
 header.sticky .dropdown-item{
-    background-color: white;
+    background-color: #f5f5dc;
 }
 
 header.sticky .dropdown-item:hover{
@@ -40,12 +39,12 @@ header.sticky .dropdown-item:hover{
 }
 
 header.sticky #sub-nav{
-    background-color: white;
+    background-color: #f5f5dc;
 }
 
 a#cart:hover{
     cursor: pointer;
-    background-color: var(--green);
+    background-color: #004225;
 }
 
 a#cart:hover .fa-shopping-cart{
@@ -66,7 +65,7 @@ input[type="text"]{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #004225;
     background-clip: padding-box;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -77,7 +76,7 @@ input[type="text"]{
 
 input[type="text"]:focus{
     color: white;
-    border: 2px solid var(--green);
+    border: 2px solid #004225;
     background-color: transparent;
     outline: 0;
 }
@@ -119,15 +118,13 @@ header.sticky #wrapper{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+
 header.sticky .container{
     padding-top: 0;
     padding-bottom: 0;
 }
 
 header.sticky .fa-shopping-cart, header.sticky .fa-caret-down{
-    color: var(--blue); 
-}
-header.sticky .fa-search, header.sticky .fa-caret-down{
     color: var(--blue); 
 }
 
@@ -163,7 +160,7 @@ header.sticky a{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #004225;
     z-index: 999;
     display: none;
     animation: fadeIn linear 0.2s;
@@ -222,7 +219,7 @@ header.sticky a{
 .header__mobile-nav-link:hover{
     background-color: rgb(226, 222, 222)!important;
     cursor: pointer;
-    color: var(--green) !important;
+    color: #004225 !important;
 }
 
 header.sticky #wrapper{

@@ -18,7 +18,9 @@
     text-align: justify;
     color: #666666;
 }
-
+#homemain{
+    background-color: #f5f5dc;
+}
 @media only screen and (max-width: 739px){
     .slide-title{
         font-size: 32px;
@@ -65,7 +67,7 @@
     font-weight: bold;
     font-size: 28px;
     text-align: center;
-    color: #192A56;
+    color: #ee4d2d;
 }
 
 .categories{
@@ -91,7 +93,7 @@
 .cate-item:hover{
     border: 2px solid var(--green);
     filter: drop-shadow(1px 1px 5px #27AE60);
-    border-radius: 10px;
+    border-radius: 1px;
     z-index: 0;
 }
 
@@ -181,11 +183,11 @@
 }
 .star-rating input:not(:checked) ~ label:hover,
 .star-rating input:not(:checked) ~ label:hover ~ label{
-    color: #fd4;
+    color: #27AE60;
     cursor:pointer;
 }
 
 .star-rating input:checked ~ label{
-    color: #fd4;
+    color: #27AE60;
     cursor:pointer;
 }

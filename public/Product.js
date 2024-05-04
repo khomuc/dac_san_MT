@@ -1,71 +1,76 @@
 var dbProducts = {
     sp1:{
         id:1,
-        name: "Bánh",
+        name: "Bánh canh cua",
         weigth: "100",
-        price: "5000",
-        img:"/public/img/vegetables/43.jpg"
+        price: "30.000đ",
+        img:"/public/img/img_đs/BanhCanhCua.png"
     },
 
     sp2:{
         id:2,
-        name: "Bắp non",
+        name: "Bánh Giá",
         weigth: "100",
-        price: "5000",
-        img:"/public/img/vegetables/5.jpg"
+        price: "20.000đ",
+        img:"/public/img/img_đs/BanhGia.png"
     },
 
     sp3:{
         id:3,
-        name: "Bầu",
+        name: "Bánh mì chảo",
         weigth: "500",
-        price: "15000",
-        img:"/public/img/vegetables/6.jpg"
+        price: "20.000đ",
+        img:"/public/img/img_đs/BanhMiChao.jpg"
     },
 
     sp4:{
         id:4,
-        name: "Bí đao",
+        name: "Bánh tét",
         weigth: "500",
-        price: "13000",
-        img:"/public/img/vegetables/7.jpg"
+        price: "15.000đ",
+        img:"/public/img/img_đs/BanhTet.png"
     },
 
     sp5:{
         id:5,
-        name: "Bí đỏ",
+        name: "Bún nước kèn",
         weigth: "500",
-        price: "12000",
-        img:"/public/img/vegetables/8.jpg"
+        price: "20.000đ",
+        img:"/public/img/img_đs/BunNuocKen.jpg"
     },
 
     sp6:{
         id:6,
-        name: "Bí ngòi xanh",
+        name: "Bún nước lèo",
         weigth: "500",
-        price: "18000",
-        img:"/public/img/vegetables/9.jpg"
+        price: "20.000đ",
+        img:"/public/img/img_đs/BunNuocLeo.png"
     },
 
     sp7:{
         id:7,
-        name: "Bông bí",
+        name: "Cơm tấm",
         weigth: "500",
-        price: "22000",
-        img:"/public/img/vegetables/10.jpg"
+        price: "25.000đ",
+        img:"/public/img/img_đs/ComTam.jpg"
     },
 
     sp8:{
         id:8,
-        name: "Bông hẹ",
+        name: "Hủ tiếu",
         weigth: "500",
-        price: "20000",
-        img:"/public/img/vegetables/11.jpg"
-    },
-    
-   
-}
+        price: "25.000đ",
+        img:"/public/img/img_đs/HuTieu.png"
+    }
 
+    sp9:{
+        id:9,
+        name: "Kẹo dừa",
+        weigth: "500",
+        price: "25.000đ",
+        img:"/public/img/img_đs/KeoDua.png"
+    }
+}
 
 let size = Object.keys(dbProducts).length;
 console.log(size)

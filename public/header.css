@@ -20,9 +20,10 @@ header{
     grid-area: header-cell;
     /* height: 100px; space */
     border-radius: 8px;
-    border: 1px #ccc7c8;
+    border: 1px #f5f5dc;
     padding: 0px 0px;
     position: fixed;
+    background-color: #f5f5dc;
 }
 #logo{
     max-width: 80px;

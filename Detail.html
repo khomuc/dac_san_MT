@@ -2,14 +2,19 @@
 <html lang="en">
 
 <head>
-    <title>Đánh giá</title>
+    <title>Bếp Miền Tây</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="logo" href="public/images/Logo/Artboard 2.png" type="image/vnd.microsoft.icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="logo" href="images/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/fontawesome/css/all.min.css">
     <script src="public/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="shortcut icon" href="public/images/logo.png">
+    <link rel="shortcut icon" href="./public/images/Logo/ICON.png">
     <link rel="stylesheet" href="./public/font/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./public/css/base.css">
@@ -22,21 +27,70 @@
     <link rel="stylesheet" href="./public/css/profile.css">
     <link rel="stylesheet" href="./public/css/cart.css">
     <link rel="stylesheet" href="public/Product.css">
+    <title>Đánh giá</title>
+
 </head>
 
-<body>
+<body onload="showUser(),showProductDetail()">
+    <!-- header -->
+    <header>
+        <div id="wrapper" class="wrapper position-fixed top-0">
+            <div class="container mt-1 mb-2">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div id="header-logo" class="col-xl-3 col-md-1">
+                        <a href="/home.html"><img class="w-50" src="public/images/Logo/Artboard 2.png" alt="Logo"></a>
+                    </div>
+                    <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
+                        <nav class="nav nav-pills flex-column flex-sm-row">
+                            <a class="flex-sm-fill text-sm-center nav-link" href="home.html">Trang chủ</a>
+                            <a class="flex-sm-fill text-sm-center nav-link" href="Product.html">Sản phẩm</a>
+                            <a class="flex-sm-fill text-sm-center nav-link" href="about.html">Giới thiệu</a>
+                        </nav>
+                    </div>
+                    <div id="header-search" class="col-xl-3 col-md-7">
+                        <div class="form-text">
+                            <form action="" method="get">
+                                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
 
+                            </form>
+                        </div>
+                    </div>
+                    <div id="header-sc" class="col-xl-1 col-md-0 d-flex justify-content-end">
+                        <a href="Search.html" id="cart" class="rounded-circle text-center" style="width: 50px;"><i
+                                class="fas fa-search"></i></a>
+                    </div>
+                    <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
+                        <a href="cart.html" id="cart" class="rounded-circle text-center"
+                            style="width: 50px; height: 50px;"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
+                        <ul id="sub-nav" class="position-absolute top-100 end-0">
+                            <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Cá
+                                    nhân</a></li>
+                            <li><a class="dropdown-item" href="login5.html"><i class="fas fa-sign-out-alt me-2"></i>Đăng
+                                    xuất</a></li>
+                        </ul>
 
-    <main style="background-color: #f5f5dc;">
-        <!-- Product detail -->
-        <div class="container pt-4" style="background-color: #f5f5dc;">
-            <h3 class="sub-title text-center" style="background-color: #f5f5dc; color: rgb(00, 42, 25) ">Sản phẩm</h2>
-                <h2 class="title text-center" style="background-color: #f5f5dc; color: #ee4d2d;"> <b>THÔNG TIN SẢN
-                        PHẨM</b> </h2>
-                <div id="dtProduct" class="about" style="background-color: #f5f5dc;">
-                    <div class="row" style="background-color: #f5f5dc;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--banner-->
+    <div>
+        <img src="public/images/banner.png" alt="banner" class="img-fluid">
+    </div>
+
+    <!-- Product detail -->
+    <div class="container pt-4" style="background-color: #f5f5dc;">
+        <h3 class="sub-title text-center" style="background-color: #f5f5dc; color: rgb(00, 42, 25) ">Sản phẩm</h2>
+            <h2 class="title text-center" style="background-color: #f5f5dc; color: #ee4d2d;"> <b>THÔNG TIN SẢN
+                    PHẨM</b> </h2>
+            <div id="dtProduct" class="about" style="background-color: #f5f5dc;">
+                <!-- <div class="row" style="background-color: #f5f5dc;">
                         <div class="col-sm-4 mt-5 mb-5" style="background-color: #f5f5dc;">
-                            <source><img src="public/images/đặc sản/noodle/bunnuocleo.png" alt="" width="95%"
+                            <source><img src="IMG/Bún nước lèo.jpg" alt="" width="95%"
                                 style="border-radius: 10px; box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.421);">
                             <p></p>
                             <p style="text-align: center; font-size: 16px; color: #004225;"><i>hình ảnh minh họa</i></p>
@@ -55,11 +109,10 @@
                                 <h5 style="color: rgb(00, 42, 25); font-weight: 600; margin-bottom: 20px;">NGUỒN GỐC SẢN
                                     PHẨM</h5>
                                 <p class="detail-content"><b style="color: #004225;">Tên quán:</b> Quán Ăn Bình Dân</p>
-                                <p class="detail-content"><b style="color: #004225;">Địa chỉ:</b> Tân An, Ninh Kiều, Cần
-                                    Thơ</p>
+                                <p class="detail-content"><b style="color: #004225;">Địa chỉ:</b> Tân An, Ninh Kiều, Cần Thơ</p>
                             </div>
-                            <!--ô chuyển trang-->
-                            <ul class="pagination">
+                            ô chuyển trang-->
+                <!-- <ul class="pagination">
                                 <li class="page-item"><a class="page-link" href="#"
                                         style="color: rgb(00, 42, 25);">Previous</a>
                                 </li>
@@ -73,92 +126,52 @@
                                 <li class="page-item"><a class="page-link" href="#"
                                         style="color: rgb(00, 42, 25);">Next</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <!--Comment-->
-        <div class="col-sm-12 mt-5 mb-5">
-            <div class="comment">
-                <h2 class="title text-center" style="background-color: #f5f5dc; color: #ee4d2d;"> <b>BÌNH LUẬN VÀ ĐÁNH
-                        GIÁ</b> </h2>
-                <div class="container mt-3">
-                    <div class="row d-flex justify-content-center">
+                        </div> -->
+                <!-- </div> -->
+            </div>
+    </div>
 
-                        <div class="headings d-flex justify-content-between align-items-center mb-3">
-                            <h5 style="color: #004225;">Tất cả bình luận(3) 4.5/5<i class="fa fa-star text-warning"></i>
-                            </h5>
-                        </div>
-                        <!--Comment 1-->
-                        <div id="accordion">
-                            <div class="card p-3 mt-2"
-                                style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173) ;">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="user d-flex flex-row align-items-center"> <img
-                                            src="public/images/avatar/avatar1.jpg" height="50" width="50"
-                                            class="user-img rounded-circle mr-2">
-                                        <span>
-                                            <small class="font-weight-bold"
-                                                style="margin-left:0.2cm; color: #ee4d2d;">Nguyễn Hải Dương</small>
-                                            <small class="font-weight-bold">Ngon lắm!</small>
-                                        </span>
-                                    </div>
-                                    <small>
-                                        <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                        <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                        <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                        <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                        <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                        9-2-2024 10:00
-                                    </small>
-                                    <a class="btn" data-bs-toggle="collapse" href="#collapseFive">
-                                        <source><img src="IMG/icon reply.png" width="50px">
-                                    </a>
-                                </div>
 
-                                <div id="collapseFive" class="collapse show4" data-bs-parent="#accordion">
-                                    <div class="card-body">
-                                        Sốp cảm ơn những góp ý của bạn, sốp sẽ cải thiện để mang đến trải nghiệm
-                                        tốt hơn cho bạn
-                                    </div>
-                                </div>
-                                <div class="action d-flex justify-content-end mt-2 align-items-center">
-                                    <div class="icons align-items-center">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="far fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!--Comment-->
+    <div class="col-sm-12 mt-5 mb-5">
+        <div class="comment">
+            <h2 class="title text-center" style="background-color: #f5f5dc; color: #ee4d2d;"> <b>BÌNH LUẬN VÀ ĐÁNH
+                    GIÁ</b> </h2>
+            <div class="container mt-3">
+                <div class="row d-flex justify-content-center">
+
+                    <div class="headings d-flex justify-content-between align-items-center mb-3">
+                        <h5 style="color: #004225;">Tất cả bình luận(3) 4.5/5<i class="fa fa-star text-warning"></i>
+                        </h5>
                     </div>
-                    <!--Comment 2-->
+                    <!--Comment 1-->
                     <div id="accordion">
                         <div class="card p-3 mt-2"
-                            style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
+                            style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173) ;">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="user d-flex flex-row align-items-center"> <img
-                                        src="public/images/avatar/avatar2.jpg" height="50" width="50"
+                                        src="public/images/DETAIL/avatar 1.jfif" height="50" width="50"
                                         class="user-img rounded-circle mr-2">
                                     <span>
-                                        <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;">Lý
-                                            Minh Anh</small>
-                                        <small class="font-weight-bold">Giao hàng nhanh</small></span>
+                                        <small class="font-weight-bold"
+                                            style="margin-left:0.2cm; color: #ee4d2d;">Nguyễn Hải Dương</small>
+                                        <small class="font-weight-bold">Ngon lắm!</small>
+                                    </span>
                                 </div>
                                 <small>
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    6-8-2024 10:00
+                                    <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                    <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                    <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                    <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                    <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                    9-2-2024 10:00
                                 </small>
-                                <a class="btn" data-bs-toggle="collapse" href="#collapseFour">
-                                    <source><img src="IMG/icon reply.png" width="50px">
+                                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                    <source><img src="public/images/DETAIL/icon reply.png" width="50px">
                                 </a>
                             </div>
-                            <div id="collapseFour" class="collapse show3" data-bs-parent="#accordion">
+
+                            <div id="collapseOne" class="collapse show1" data-bs-parent="#accordion">
                                 <div class="card-body">
                                     Sốp cảm ơn những góp ý của bạn, sốp sẽ cải thiện để mang đến trải nghiệm
                                     tốt hơn cho bạn
@@ -175,80 +188,35 @@
                             </div>
                         </div>
                     </div>
-                    <!--Comment 3-->
-                    <div id="accordion">
-                        <div class="card p-3 mt-2"
-                            style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="user d-flex flex-row align-items-center"> <img
-                                        src="public/images/avatar/avatar4.jpg" height="50" width="50"
-                                        class="user-img rounded-circle mr-2">
-                                    <span>
-                                        <small class="font-weight-bold"
-                                            style="margin-left:0.2cm; color: #ee4d2d;">Nguyễn Minh
-                                            Khôi</small>
-                                        <small class="font-weight-bold">Đánh giá 5 sao, chất lượng tuyệt
-                                            vời</small></span>
-                                </div>
-                                <small>
-
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    11-3-2024 18:00
-                                </small>
-                                <a class="btn" data-bs-toggle="collapse" href="#collapseThree">
-                                    <source><img src="IMG/icon reply.png" width="50px">
-                                </a>
+                </div>
+                <!--Comment 2-->
+                <div id="accordion">
+                    <div class="card p-3 mt-2"
+                        style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="user d-flex flex-row align-items-center"> <img
+                                    src="public/images/DETAIL/avarta 2.jpg" height="50" width="50"
+                                    class="user-img rounded-circle mr-2">
+                                <span>
+                                    <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;">Lý
+                                        Minh Anh</small>
+                                    <small class="font-weight-bold">Giao hàng nhanh</small></span>
                             </div>
-                            <div id="collapseThree" class="collapse show2" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Cảm ơn bạn, chúc bạn có những trải nghiệm tốt nhất từ shop nhé!
-                                </div>
-                            </div>
-                            <div class="action d-flex justify-content-end mt-2 align-items-center">
-                                <div class="icons align-items-center">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="far fa-star text-warning"></i>
-                                </div>
-                            </div>
+                            <small>
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                6-8-2024 10:00
+                            </small>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                <source><img src="public/images/DETAIL/icon reply.png" width="50px">
+                            </a>
                         </div>
-                    </div>
-                    <!--Comment 4-->
-                    <div id="accordion">
-                        <div class="card p-3 mt-2"
-                            style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="user d-flex flex-row align-items-center"> <img
-                                        src="public/images/avatar/avatar3.jpg" height="50" width="50"
-                                        class="user-img rounded-circle mr-2">
-                                    <span>
-                                        <small class="font-weight-bold"
-                                            style="margin-left:0.2cm; color: #ee4d2d;">Phương
-                                            Thảo</small>
-                                        <small class="font-weight-bold">10đ lun ạ</small></span>
-                                </div>
-                                <small>
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    2-3-2024 16:00
-                                </small>
-                                <a class="btn" data-bs-toggle="collapse" href="#collapseTwo">
-                                    <source><img src="#" width="50px">
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="collapse show1" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Cảm ơn bạn, chúc bạn sẽ có trải nghiệm tốt nhất tại shop nhé!
-                                </div>
+                        <div id="collapseTwo" class="collapse show2" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Sốp cảm ơn những góp ý của bạn, sốp sẽ cải thiện để mang đến trải nghiệm
+                                tốt hơn cho bạn
                             </div>
                         </div>
                         <div class="action d-flex justify-content-end mt-2 align-items-center">
@@ -261,62 +229,150 @@
                             </div>
                         </div>
                     </div>
-                    <!--Comment 5-->
-                    <div id="accordion">
-                        <div class="card p-3 mt-2"
-                            style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="user d-flex flex-row align-items-center"> <img
-                                        src="public/images/avatar/avatar5.jpg" height="50" width="50"
-                                        class="user-img rounded-circle mr-2">
-                                    <span>
-                                        <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;">Phạm
-                                            Hửu Bằng</small>
-                                        <small class="font-weight-bold">Cố lên sốp ơi, tuyệt
-                                            quá</small></span>
-                                </div>
-                                <small>
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    <source> <img src="public/images/ngôi sao.jpg" alt="" width="20px">
-                                    1-4-2024 15:00
-                                </small>
-                                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-                                    <source><img src="IMG/icon reply.png" width="50px">
-                                </a>
+                </div>
+                <!--Comment 3-->
+                <div id="accordion">
+                    <div class="card p-3 mt-2"
+                        style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="user d-flex flex-row align-items-center"> <img
+                                    src="public/images/DETAIL/avarta 3.jpg" height="50" width="50"
+                                    class="user-img rounded-circle mr-2">
+                                <span>
+                                    <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;">Nguyễn
+                                        Minh
+                                        Khôi</small>
+                                    <small class="font-weight-bold">Đánh giá 5 sao, chất lượng tuyệt
+                                        vời</small></span>
                             </div>
-                            <div id="collapseOne" class="collapse show1" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Sốp cảm ơn những góp ý của bạn, sốp sẽ cải thiện để mang đến trải nghiệm
-                                    tốt hơn cho bạn
-                                </div>
+                            <small>
+
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                11-3-2024 18:00
+                            </small>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseThree">
+                                <source><img src="public/images/DETAIL/icon reply.png" width="50px">
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse show3" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Cảm ơn bạn, chúc bạn có những trải nghiệm tốt nhất từ shop nhé!
                             </div>
                         </div>
-                    </div>
-                    <div class="action d-flex justify-content-end mt-2 align-items-center">
-                        <div class="icons align-items-center">
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="fa fa-star text-warning"></i>
-                            <i class="far fa-star text-warning"></i>
+                        <div class="action d-flex justify-content-end mt-2 align-items-center">
+                            <div class="icons align-items-center">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!--Comment 4-->
+                <div id="accordion">
+                    <div class="card p-3 mt-2"
+                        style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="user d-flex flex-row align-items-center"> <img
+                                    src="public/images/DETAIL/avarta 4.jpg.png" height="50" width="50"
+                                    class="user-img rounded-circle mr-2">
+                                <span>
+                                    <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;">Trần Thị Phương Thảo
+                                       </small>
+                                    <small class="font-weight-bold">Đánh giá 5 sao, chất lượng tuyệt
+                                        vời</small></span>
+                            </div>
+                            <small>
+                                11-3-2024 18:00
+                            </small>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseFour">
+                                <source><img src="public/images/DETAIL/icon reply.png" width="50px">
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse show4" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Cảm ơn bạn, chúc bạn có những trải nghiệm tốt nhất từ shop nhé!
+                            </div>
+                        </div>
+                        <div class="action d-flex justify-content-end mt-2 align-items-center">
+                            <div class="icons align-items-center">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Comment 5-->
+                <div id="accordion">
+                    <div class="card p-3 mt-2"
+                        style="background-color: #f5f5dc; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.173)">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="user d-flex flex-row align-items-center"> <img
+                                    src="public/images/DETAIL/avarta 5.jpg.png" height="50" width="50"
+                                    class="user-img rounded-circle mr-2">
+                                <span>
+                                    <small class="font-weight-bold" style="margin-left:0.2cm; color: #ee4d2d;"> Phạm Hữu Bằng
+                                        </small>
+                                    <small class="font-weight-bold">Chất lượng tuyệt
+                                        vời</small></span>
+                            </div>
+                            <small>
+
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                <source> <img src="IMG/DETAIL/ngôi sao.png" alt="" width="20px">
+                                11-3-2024 18:00
+                            </small>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseFive">
+                                <source><img src="public/images/DETAIL/icon reply.png" width="50px">
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="collapse show5" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Cảm ơn bạn, chúc bạn có những trải nghiệm tốt nhất từ shop nhé!
+                            </div>
+                        </div>
+                        <div class="action d-flex justify-content-end mt-2 align-items-center">
+                            <div class="icons align-items-center">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    </main>
 
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    <!--footer-->
     <footer class="bg-footer">
         <div class="wrapper bg-footer ">
             <div class="container">
                 <div class="footer">
                     <div class="footer-intro">
-                        <img class="footer-intro-img mb-2" src="public/images/logo-2.jpg" alt="logo">
+                        <img class="footer-intro-img mb-2" src="public/images/Logo/Artboard 2_1.png" alt="logo">
                         <p class="footer-intro-content"><b class="footer-intro-content">Bếp Miền Tây </b>là Nơi Kết Nối
                             Giữa Hương Sắc và Truyền Thống, Hòa Mình Trong Vị Ngọt Đắng của Miền Tây: Khám Phá Tinh Hoa
                             Ẩm Thực!!.</p>
@@ -334,27 +390,47 @@
                         </div>
                         <div class="footer-nav-content center">
                             <h3 class="footer-nav-title">DANH MỤC</h3>
-                            <p class="footer-nav-link"><a href="">Trang chủ</a></p>
-                            <p class="footer-nav-link"><a href="">Sản phẩm</a></p>
-                            <p class="footer-nav-link"><a href="">Giới thiệu</a></p>
+                            <p class="footer-nav-link"><a href="home.html">Trang chủ</a></p>
+                            <p class="footer-nav-link"><a href="Product.html">Sản phẩm</a></p>
+                            <p class="footer-nav-link"><a href="about.html">Giới thiệu</a></p>
                         </div>
                         <div class="footer-nav-content">
                             <h3 class="footer-nav-title ">ĐẶC SẢN</h3>
-                            <p class="footer-nav-link"><a href="">Noodle</a></p>
-                            <p class="footer-nav-link"><a href="">Kẹo</a></p>
-                            <p class="footer-nav-link"><a href="">Bánh ngọt</a></p>
-                            <p class="footer-nav-link"><a href="">Bánh mặn</a></p>
-                            <p class="footer-nav-link"><a href="">Hải sản</a></p>
-                            <p class="footer-nav-link"><a href="">Đồ uống</a></p>
+                            <p class="footer-nav-link"><a href="">Món nước</a></p>
+                            <p class="footer-nav-link"><a href="">Món khô</a></p>
+                            <p class="footer-nav-link"><a href="">Bánh kẹo</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--về đầu trang-->
-        <a class="on-top" href=""></a>
+        <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button> -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
     </footer>
+    <!-- JQuery -->
+    <script src="./public/js/jquery.js"></script>
 
+    <!-- Javascript for Bootstrap -->
+    <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- JS menu bar -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('header').addClass('sticky');
+                }
+                else {
+                    $('header').removeClass('sticky');
+                }
+            })
+        });
+    </script>
+    <script src="./public/js/cart.js"></script>
+    <script src="./public/js/profile.js"></script>
+    <script src="./public/js/products.js"></script>
+    <script src="./public/js/auth.js"></script>
 </body>
 
 </html>

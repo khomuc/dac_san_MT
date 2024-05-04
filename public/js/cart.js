@@ -1,76 +1,11 @@
-// let dbProducts = {
-//     sp1:{
-//         id:1,
-//         name: "Hành",
-//         weigth: "100",
-//         price: "5000",
-//         img:"/public/img/vegetables/43.jpg"
-//     },
-
-//     sp2:{
-//         id:2,
-//         name: "Bắp non",
-//         weigth: "100",
-//         price: "5000",
-//         img:"/public/img/vegetables/5.jpg"
-//     },
-
-//     sp3:{
-//         id:3,
-//         name: "Bầu",
-//         weigth: "500",
-//         price: "15000",
-//         img:"/public/img/vegetables/6.jpg"
-//     },
-
-//     sp4:{
-//         id:4,
-//         name: "Bí đao",
-//         weigth: "500",
-//         price: "13000",
-//         img:"/public/img/vegetables/7.jpg"
-//     },
-
-//     sp5:{
-//         id:5,
-//         name: "Bí đỏ",
-//         weigth: "500",
-//         price: "12000",
-//         img:"/public/img/vegetables/8.jpg"
-//     },
-
-//     sp6:{
-//         id:6,
-//         name: "Bí ngòi xanh",
-//         weigth: "500",
-//         price: "18000",
-//         img:"/public/img/vegetables/9.jpg"
-//     },
-
-//     sp7:{
-//         id:7,
-//         name: "Bông bí",
-//         weigth: "500",
-//         price: "22000",
-//         img:"/public/img/vegetables/10.jpg"
-//     },
-
-//     sp8:{
-//         id:8,
-//         name: "Bông hẹ",
-//         weigth: "500",
-//         price: "20000",
-//         img:"/public/img/vegetables/11.jpg"
-//     }
-// }
 
 var users = {
     us1:{
-        mail: "leminhkha@gmail.com",
+        mail: "phuongthao@gmail.com",
         password: "12345",
-        name: "Lê Minh Kha",
+        name: "Phương Thảo",
         address: "Ninh Kiều, Cần Thơ",
-        img:"./public/img/users/userLMK.jpg"
+        img:"./public/img/giothieu/avt.jpg"
     },
   }
 
